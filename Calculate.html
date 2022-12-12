@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculate</title>
+</head>
+<body>
+<h1>Calculate</h1>
+<table>
+    <tr>
+        <th>Number One</th>
+        <th>Number Two</th>
+    </tr>
+    <tr>
+        <td><input id="Num1" type="number" placeholder="Enter the first number"></td>
+        <td><input id="Num2" type="number" placeholder="Enter the second number"></td>
+    </tr>
+</table>
+<br>
+<div>
+  <button id="Plus" onclick="Plus()">+</button>
+  <button id="Minus" onclick="Minus()">-</button>
+  <button id="Multiply" onclick="Multiply()">*</button>
+  <button id="Divide" onclick="Divide()">/</button>
+</div>
+<h3>Result:</h3>
+<pre id="result"></pre>
+<br>
+<script>
+  function Plus(){
+    let valueNum1 = document.getElementById("Num1").value
+    let valueNum2 = document.getElementById("Num2").value
+    let Result = Number(valueNum1) + Number(valueNum2)
+    document.getElementById("result").innerHTML= Result
+  }
+  function Minus(){
+    let valueNum1 = document.getElementById("Num1").value
+    let valueNum2 = document.getElementById("Num2").value
+    let Result = valueNum1 - valueNum2
+    document.getElementById("result").innerHTML= Result
+  }
+  function Multiply(){
+    let valueNum1 = document.getElementById("Num1").value
+    let valueNum2 = document.getElementById("Num2").value
+    let Result = valueNum1 * valueNum2
+    document.getElementById("result").innerHTML= Result
+  }
+  function Divide(){
+    let valueNum1 = document.getElementById("Num1").value
+    let valueNum2 = document.getElementById("Num2").value
+    let Result = valueNum1 / valueNum2
+    document.getElementById("result").innerHTML= Result
+  }
+</script>
+</body>
+</html>
